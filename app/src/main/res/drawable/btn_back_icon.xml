@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Button Focused -->
+    <item android:state_focused="true"
+        android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp"/>
+            <gradient
+                android:type="radial"
+                android:gradientRadius="200dp"
+                android:startColor="@color/colorRed"
+                android:endColor="@color/white" />
+            <corners android:radius="500dp"/>
+        </shape>
+    </item>
+
+    <!-- Button Focused Pressed -->
+    <item android:state_focused="true"
+        android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp"/>
+            <gradient
+                android:type="radial"
+                android:gradientRadius="200dp"
+                android:startColor="@color/colorRed"
+                android:endColor="@color/white" />
+            <corners android:radius="500dp"/>
+        </shape>
+    </item>
+
+    <!-- Button Pressed -->
+    <item android:state_focused="false"
+        android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp"/>
+            <gradient
+                android:type="radial"
+                android:gradientRadius="200dp"
+                android:startColor="@color/colorRed"
+                android:endColor="@color/white" />
+            <corners android:radius="500dp"/>
+        </shape>
+    </item>
+
+    <!-- Button Disabled -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp"/>
+            <gradient
+                android:type="radial"
+                android:gradientRadius="200dp"
+                android:startColor="@color/colorConcrete"
+                android:endColor="@color/white" />
+            <corners android:radius="500dp"/>
+        </shape>
+    </item>
+
+    <!-- Button Default -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="50dp"/>
+            <gradient
+                android:type="radial"
+                android:gradientRadius="50dp"
+                android:startColor="@color/colorPrimary"
+                android:endColor="@color/white" />
+            <corners android:radius="500dp"/>
+        </shape>
+    </item>
+</selector>

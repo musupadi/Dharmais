@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_cancer_wound"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_cancer_wound_care" />
+        <item
+            android:id="@+id/nav_deteksi_dini"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_deteksi_dini_kanker" />
+    </group>
+</menu>
