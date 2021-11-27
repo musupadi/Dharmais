@@ -5,6 +5,8 @@ import androidx.annotation.Nullable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class DataModel {
     @SerializedName("id_news")
     @Expose
@@ -70,6 +72,84 @@ public class DataModel {
     @Expose
     @Nullable
     public String status;
+
+    @SerializedName("id_testimonial")
+    @Expose
+    @Nullable
+    public String id_testimonial;
+
+    @SerializedName("nama")
+    @Expose
+    @Nullable
+    public String nama;
+
+
+    @SerializedName("pesan")
+    @Expose
+    @Nullable
+    public String pesan;
+
+    @SerializedName("id_jadwalspesialis")
+    @Expose
+    @Nullable
+    public String id_jadwalspesialis;
+
+    @SerializedName("spesialis")
+    @Expose
+    @Nullable
+    public String spesialis;
+
+    @SerializedName("id_jadwaldokter")
+    @Expose
+    @Nullable
+    public String id_jadwaldokter;
+
+    @SerializedName("namadokter")
+    @Expose
+    @Nullable
+    public String namadokter;
+
+    @SerializedName("gelar")
+    @Expose
+    @Nullable
+    public String gelar;
+
+    @SerializedName("urut")
+    @Expose
+    @Nullable
+    public String urut;
+
+    @SerializedName("datepublished")
+    @Expose
+    @Nullable
+    public String datepublished;
+
+
+    @SerializedName("isijadwal")
+    @Nullable
+    List<DataModel> isijadwal;
+
+    //ISI JADWAL
+    @SerializedName("id_isijadwal")
+    @Expose
+    @Nullable
+    public String id_isijadwal;
+
+
+    @SerializedName("lokasi")
+    @Expose
+    @Nullable
+    public String lokasi;
+
+    @SerializedName("jam")
+    @Expose
+    @Nullable
+    public String jam;
+
+    @SerializedName("hari")
+    @Expose
+    @Nullable
+    public String hari;
 
     @Nullable
     public String getId_news() {
@@ -186,5 +266,140 @@ public class DataModel {
 
     public void setStatus(@Nullable String status) {
         this.status = status;
+    }
+
+    @Nullable
+    public String getId_testimonial() {
+        return id_testimonial;
+    }
+
+    public void setId_testimonial(@Nullable String id_testimonial) {
+        this.id_testimonial = id_testimonial;
+    }
+
+    @Nullable
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(@Nullable String nama) {
+        this.nama = nama;
+    }
+
+    @Nullable
+    public String getPesan() {
+        return pesan;
+    }
+
+    public void setPesan(@Nullable String pesan) {
+        this.pesan = pesan;
+    }
+
+    @Nullable
+    public String getId_jadwalspesialis() {
+        return id_jadwalspesialis;
+    }
+
+    public void setId_jadwalspesialis(@Nullable String id_jadwalspesialis) {
+        this.id_jadwalspesialis = id_jadwalspesialis;
+    }
+
+    @Nullable
+    public String getSpesialis() {
+        return spesialis;
+    }
+
+    public void setSpesialis(@Nullable String spesialis) {
+        this.spesialis = spesialis;
+    }
+
+    @Nullable
+    public String getId_jadwaldokter() {
+        return id_jadwaldokter;
+    }
+
+    public void setId_jadwaldokter(@Nullable String id_jadwaldokter) {
+        this.id_jadwaldokter = id_jadwaldokter;
+    }
+
+    @Nullable
+    public String getNamadokter() {
+        return namadokter;
+    }
+
+    public void setNamadokter(@Nullable String namadokter) {
+        this.namadokter = namadokter;
+    }
+
+    @Nullable
+    public String getGelar() {
+        return gelar;
+    }
+
+    public void setGelar(@Nullable String gelar) {
+        this.gelar = gelar;
+    }
+
+    @Nullable
+    public String getUrut() {
+        return urut;
+    }
+
+    public void setUrut(@Nullable String urut) {
+        this.urut = urut;
+    }
+
+    @Nullable
+    public String getDatepublished() {
+        return datepublished;
+    }
+
+    public void setDatepublished(@Nullable String datepublished) {
+        this.datepublished = datepublished;
+    }
+
+    @Nullable
+    public List<DataModel> getIsijadwal() {
+        return isijadwal;
+    }
+
+    public void setIsijadwal(@Nullable List<DataModel> isijadwal) {
+        this.isijadwal = isijadwal;
+    }
+
+    @Nullable
+    public String getId_isijadwal() {
+        return id_isijadwal;
+    }
+
+    public void setId_isijadwal(@Nullable String id_isijadwal) {
+        this.id_isijadwal = id_isijadwal;
+    }
+
+    @Nullable
+    public String getLokasi() {
+        return lokasi;
+    }
+
+    public void setLokasi(@Nullable String lokasi) {
+        this.lokasi = lokasi;
+    }
+
+    @Nullable
+    public String getJam() {
+        return jam;
+    }
+
+    public void setJam(@Nullable String jam) {
+        this.jam = jam;
+    }
+
+    @Nullable
+    public String getHari() {
+        return hari;
+    }
+
+    public void setHari(@Nullable String hari) {
+        this.hari = hari;
     }
 }

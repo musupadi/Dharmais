@@ -80,11 +80,12 @@
                     android:orientation="vertical"
                     android:gravity="center">
                     <LinearLayout
+                        android:id="@+id/linearJadwalDokter"
                         android:gravity="center"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:background="@drawable/btn_back_icon"
-                        android:padding="20dp">
+                        android:padding="30dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -113,7 +114,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:background="@drawable/btn_back_icon"
-                        android:padding="20dp">
+                        android:padding="30dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -142,7 +143,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:background="@drawable/btn_back_icon"
-                        android:padding="20dp">
+                        android:padding="30dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -169,7 +170,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:background="@drawable/btn_back_icon"
-                        android:padding="20dp">
+                        android:padding="30dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -180,7 +181,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="KOnsultasi Obat"
+                        android:text="Konsultasi Obat"
                         android:layout_weight="2"
                         android:textColor="@color/colorPrimary"/>
                 </LinearLayout>
@@ -196,7 +197,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:background="@drawable/btn_back_icon"
-                        android:padding="20dp">
+                        android:padding="30dp">
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -230,99 +231,104 @@
                 android:layout_height="wrap_content"
                 android:text="Informasi Update RS Kanker Dharmais"
                 android:fontFamily="@font/gotham"/>
-            <LinearLayout
-                android:elevation="10dp"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded"
-                android:layout_margin="5dp"
-                android:padding="5dp">
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                android:layout_margin="10dp">
                 <LinearLayout
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/rounded_active"
-                    android:orientation="vertical"
-                    android:id="@+id/linearBerita">
-                    <TextView
-                        android:gravity="center"
-                        android:textSize="@dimen/text_medium"
-                        android:id="@+id/tvBerita"
-                        android:layout_margin="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Berita"
-                        android:textColor="@color/colorWhite"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/linearArtikel"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/btn_rounded_white"
-                    android:orientation="vertical">
-                    <TextView
-                        android:gravity="center"
-                        android:textSize="@dimen/text_medium"
-                        android:id="@+id/tvArtikel"
-                        android:layout_margin="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Artikel"
-                        android:textColor="@color/colorPrimary"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/linearEvent"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
-                    android:orientation="vertical">
-                    <TextView
-                        android:gravity="center"
-                        android:textSize="@dimen/text_medium"
-                        android:id="@+id/tvEvent"
-                        android:layout_margin="10dp"
+                    android:padding="5dp">
+                    <LinearLayout
+                        android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Event"
-                        android:textColor="@color/colorPrimary"/>
+                        android:background="@drawable/btn_round_active"
+                        android:orientation="vertical"
+                        android:id="@+id/linearBerita">
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/text_medium"
+                            android:id="@+id/tvBerita"
+                            android:layout_margin="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Berita"
+                            android:textColor="@color/colorWhite"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linearArtikel"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_rounded_white"
+                        android:orientation="vertical">
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/text_medium"
+                            android:id="@+id/tvArtikel"
+                            android:layout_margin="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Artikel"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linearEvent"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded"
+                        android:orientation="vertical">
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/text_medium"
+                            android:id="@+id/tvEvent"
+                            android:layout_margin="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Event"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+                    <!--                <LinearLayout-->
+                    <!--                    android:id="@+id/linearSurvei"-->
+                    <!--                    android:layout_weight="1"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="match_parent"-->
+                    <!--                    android:background="@drawable/rounded"-->
+                    <!--                    android:orientation="vertical">-->
+                    <!--                    <TextView-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:textSize="@dimen/text_medium"-->
+                    <!--                        android:id="@+id/tvSurvei"-->
+                    <!--                        android:layout_margin="10dp"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="match_parent"-->
+                    <!--                        android:text="Survei"-->
+                    <!--                        android:textColor="@color/colorPrimary"/>-->
+                    <!--                </LinearLayout>-->
+                    <!--                <LinearLayout-->
+                    <!--                    android:id="@+id/linearKetersediaanBed"-->
+                    <!--                    android:layout_weight="1"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:background="@drawable/rounded"-->
+                    <!--                    android:orientation="vertical">-->
+                    <!--                    <TextView-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:id="@+id/tvKetersediaanBed"-->
+                    <!--                        android:layout_margin="10dp"-->
+                    <!--                        android:textSize="@dimen/text_medium"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:text="Ketersediaan Bed"-->
+                    <!--                        android:textColor="@color/colorPrimary"/>-->
+                    <!--                </LinearLayout>-->
                 </LinearLayout>
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/linearSurvei"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:background="@drawable/rounded"-->
-<!--                    android:orientation="vertical">-->
-<!--                    <TextView-->
-<!--                        android:gravity="center"-->
-<!--                        android:textSize="@dimen/text_medium"-->
-<!--                        android:id="@+id/tvSurvei"-->
-<!--                        android:layout_margin="10dp"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:text="Survei"-->
-<!--                        android:textColor="@color/colorPrimary"/>-->
-<!--                </LinearLayout>-->
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/linearKetersediaanBed"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:background="@drawable/rounded"-->
-<!--                    android:orientation="vertical">-->
-<!--                    <TextView-->
-<!--                        android:gravity="center"-->
-<!--                        android:id="@+id/tvKetersediaanBed"-->
-<!--                        android:layout_margin="10dp"-->
-<!--                        android:textSize="@dimen/text_medium"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="Ketersediaan Bed"-->
-<!--                        android:textColor="@color/colorPrimary"/>-->
-<!--                </LinearLayout>-->
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -555,71 +561,11 @@
                 android:layout_height="wrap_content"
                 android:text="Kesan dan peesan maupun Pengunjung RS Kanker Dharmais"
                 android:fontFamily="@font/gotham"/>
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="10dp"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp">
-                    <LinearLayout
-                        android:padding="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:background="@color/colorConcrete"
-                        android:gravity="center">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/gotham"
-                            android:gravity="right|center"
-                            android:text="Puas dengan layanan RS Dharmais\nPengalaman kami selamat kami berobat dipoli\ndokter dan perawat sangat welcome dan\nmelayani dengan baik"/>
-                        <TextView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/gotham"
-                            android:gravity="right|center"
-                            android:text="Ibu Endang-Jakarta"/>
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="10dp"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:background="@color/colorConcrete"
-                        android:gravity="center"
-                        android:padding="10dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/gotham"
-                            android:gravity="right|center"
-                            android:text="Puas dengan layanan RS Dharmais\nPengalaman kami selamat kami berobat dipoli\ndokter dan perawat sangat welcome dan\nmelayani dengan baik"/>
-                        <TextView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/gotham"
-                            android:gravity="right|center"
-                            android:text="Ibu Endang-Jakarta"/>
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerTestimoni"
+                android:layout_marginBottom="80dp"/>
         </LinearLayout>
     </ScrollView>
 

@@ -1,12 +1,14 @@
 package com.ascendant.dharmais.ui;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -27,9 +29,11 @@ import com.ascendant.dharmais.API.ApiRequest;
 import com.ascendant.dharmais.API.RetroServer;
 import com.ascendant.dharmais.Adapter.AdapterBanner;
 import com.ascendant.dharmais.Adapter.AdapterBerita;
+import com.ascendant.dharmais.Adapter.AdapterTestimoni;
 import com.ascendant.dharmais.Model.DataModel;
 import com.ascendant.dharmais.Model.ResponseModel;
 import com.ascendant.dharmais.R;
+import com.ascendant.dharmais.ui.Utama.JadwalDokter.SpesialisDokterActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +46,7 @@ public class FragmentUtama extends Fragment {
 
 
     LinearLayout Selengkapnya;
-    RecyclerView Berita;
+    RecyclerView Berita,Testimoni;
     private List<DataModel> mItems = new ArrayList<>();
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mManager;
@@ -63,6 +67,8 @@ public class FragmentUtama extends Fragment {
     int SizeBanner = 0;
     boolean forward;
     Dialog dialog;
+
+    LinearLayout JadwalDokter;
     public FragmentUtama() {
         // Required empty public constructor
     }
@@ -83,7 +89,10 @@ public class FragmentUtama extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        JadwalDokter = view.findViewById(R.id.linearJadwalDokter);
+
         Berita = view.findViewById(R.id.recyclerBerita);
+        Testimoni = view.findViewById(R.id.recyclerTestimoni);
         LArtikel = view.findViewById(R.id.linearArtikel);
         LBerita = view.findViewById(R.id.linearBerita);
         LEvent = view.findViewById(R.id.linearEvent);
@@ -104,7 +113,15 @@ public class FragmentUtama extends Fragment {
         Tutup = dialog.findViewById(R.id.btnTutup);
         Default();
         Berita();
+        Testimoni();
         Header(0);
+        JadwalDokter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), SpesialisDokterActivity.class);
+                startActivity(intent);
+            }
+        });
         Tutup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,30 +149,62 @@ public class FragmentUtama extends Fragment {
     }
 
     private void Default(){
-        LArtikel.setBackgroundResource(R.drawable.rounded);
-        LBerita.setBackgroundResource(R.drawable.rounded);
-        LEvent.setBackgroundResource(R.drawable.rounded);
+        LArtikel.setBackgroundResource(R.drawable.btn_round);
+        LBerita.setBackgroundResource(R.drawable.btn_round);
+        LEvent.setBackgroundResource(R.drawable.btn_round);
         TArtikel.setTextColor(Color.BLACK);
         TBerita.setTextColor(Color.BLACK);
         TEvent.setTextColor(Color.BLACK);
     }
     private void Artikel(){
         Default();
-        LArtikel.setBackgroundResource(R.drawable.rounded_active);
+        LArtikel.setBackgroundResource(R.drawable.btn_round_active);
         TArtikel.setTextColor(Color.WHITE);
         KabarBerita("Artikel");
     }
     private void Berita(){
         Default();
-        LBerita.setBackgroundResource(R.drawable.rounded_active);
+        LBerita.setBackgroundResource(R.drawable.btn_round_active);
         TBerita.setTextColor(Color.WHITE);
         KabarBerita("News");
     }
     private void Event(){
         Default();
-        LEvent.setBackgroundResource(R.drawable.rounded_active);
+        LEvent.setBackgroundResource(R.drawable.btn_round_active);
         TEvent.setTextColor(Color.WHITE);
         KabarBerita("Event");
+    }
+    private void Testimoni(){
+        mManager = new GridLayoutManager(getActivity(),2);
+        Testimoni.setLayoutManager(mManager);
+        ApiRequest api = RetroServer.getClient().create(ApiRequest.class);
+        Call<ResponseModel> KabarBerita = api.Testimoni();
+        KabarBerita.enqueue(new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                try {
+                    if (response.body().getStatus().equals("200")){
+                        mItems=response.body().getData();
+                        mAdapter = new AdapterTestimoni(getActivity(),mItems);
+                        Testimoni.setAdapter(mAdapter);
+                        mAdapter.notifyDataSetChanged();
+                    }else{
+                        Toast.makeText(getActivity(), "Terjadi Kesalahan ", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+//                    Toast.makeText(getActivity(), "Terjadi Kesalahan User akan Terlogout", Toast.LENGTH_SHORT).show();
+////                    dbHelper.Logout();
+//                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+//                    startActivity(intent);
+//                    getActivity().finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+//                Toast.makeText(getActivity(), "Koneksi Gagal", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     private void KabarBerita(String kabar){
         mManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false);
