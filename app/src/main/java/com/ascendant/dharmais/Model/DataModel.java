@@ -151,6 +151,18 @@ public class DataModel {
     @Nullable
     public String hari;
 
+    //Page
+    @SerializedName("id_page")
+    @Expose
+    @Nullable
+    public String id_page;
+
+    @SerializedName("parent")
+    @Expose
+    @Nullable
+    public String parent;
+
+
     @Nullable
     public String getId_news() {
         return id_news;

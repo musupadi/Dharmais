@@ -23,6 +23,9 @@ public interface ApiRequest {
     @GET("spesialis")
     Call<ResponseModel> Spesialis();
 
+    @GET("page/data")
+    Call<ResponseModel> Page(@Query("parent") String parent);
+
     //POST
     @FormUrlEncoded
     @POST("jadwaldokter")

@@ -28,6 +28,8 @@
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/drawable/btn_round_active.xml" value="0.2203125" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/drawable/btn_rounded_active.xml" value="0.2203125" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/drawable/btn_rounded_white.xml" value="0.2203125" />
+        <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/activity_detail_berita.xml" value="0.15307971014492755" />
+        <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/activity_detail_page.xml" value="0.1585144927536232" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/activity_jadwal_dokter.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -48,6 +50,7 @@
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/list_berita.xml" value="0.25" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/list_isi_jadwal.xml" value="0.21" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/list_jadwal.xml" value="0.22" />
+        <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/list_page.xml" value="0.22" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/list_spesialis.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/list_testimoni.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/Zyarga/AndroidStudioProjects/RS Dharmais/app/src/main/res/layout/nav_header_utama.xml" value="0.1" />

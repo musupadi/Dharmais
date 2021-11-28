@@ -5,56 +5,53 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ascendant.dharmais.ui.pages.DetailPageActivity;
 import com.ascendant.dharmais.Method.Destiny;
 import com.ascendant.dharmais.Model.DataModel;
 import com.ascendant.dharmais.R;
-import com.ascendant.dharmais.ui.pages.DetailPageActivity;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
-public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.HolderData> {
+public class AdapterPage extends RecyclerView.Adapter<AdapterPage.HolderData> {
     private List<DataModel> mList;
     private Context ctx;
 
     Boolean onClick=false;
     RecyclerView recyclerView;
     Destiny destiny;
-    public AdapterBerita(Context ctx, List<DataModel> mList){
+    public AdapterPage(Context ctx, List<DataModel> mList){
         this.ctx = ctx;
         this.mList = mList;
     }
 
     @NonNull
     @Override
-    public AdapterBerita.HolderData onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View layout = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_berita,viewGroup,false);
-        AdapterBerita.HolderData holder = new AdapterBerita.HolderData(layout);
+    public AdapterPage.HolderData onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View layout = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_page,viewGroup,false);
+        AdapterPage.HolderData holder = new AdapterPage.HolderData(layout);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final AdapterBerita.HolderData holderData, int posistion) {
+    public void onBindViewHolder(@NonNull final AdapterPage.HolderData holderData, int posistion) {
         final DataModel dm = mList.get(posistion);
         Destiny destiny = new Destiny();
+        holderData.tvTitle.setText(dm.getTitle());
+        holderData.tvPermalink.setText(dm.getPermalink());
         Glide.with(ctx)
                 .load(destiny.BASE_URL()+dm.getImage())
-                .apply(new RequestOptions().override(350, 550))
                 .into(holderData.imgPhoto);
-        holderData.tvName.setText(destiny.LimitCharacter(dm.getTitle(),40));
-        holderData.tvDeskripsi.setText(destiny.SmallDescription(destiny.FilterTextToJava(dm.getDescription())));
-        holderData.tvTanggal.setText(dm.getDate());
-
-        holderData.card.setOnClickListener(new View.OnClickListener() {
+        holderData.Description.loadData(dm.getDescription(),"text/html","UTF-8");
+        holderData.Baca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(ctx, DetailPageActivity.class);
@@ -65,7 +62,6 @@ public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.HolderData
                 ctx.startActivity(i);
             }
         });
-
     }
 
     @Override
@@ -75,16 +71,16 @@ public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.HolderData
 
     class HolderData extends RecyclerView.ViewHolder{
         ImageView imgPhoto;
-        TextView tvName,tvDeskripsi,tvTanggal;
-        CardView card;
+        TextView tvTitle,tvPermalink;
+        WebView Description;
+        LinearLayout Baca;
         public HolderData(View v){
             super(v);
             imgPhoto = itemView.findViewById(R.id.ivImage);
-            tvName = itemView.findViewById(R.id.tvNamaBerita);
-            tvDeskripsi = itemView.findViewById(R.id.tvDeskripsi);
-            tvTanggal = itemView.findViewById(R.id.tvTanggal);
-            card = itemView.findViewById(R.id.card_view);
+            tvTitle = itemView.findViewById(R.id.tvTitle);
+            tvPermalink = itemView.findViewById(R.id.tvPermalink);
+            Description = itemView.findViewById(R.id.web);
+            Baca = itemView.findViewById(R.id.linearBaca);
         }
     }
 }
-

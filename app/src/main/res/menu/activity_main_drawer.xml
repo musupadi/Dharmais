@@ -24,5 +24,101 @@
             android:id="@+id/nav_deteksi_dini"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_deteksi_dini_kanker" />
+        <item
+            android:id="@+id/nav_diklit"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_diklit" />
+        <item
+            android:id="@+id/nav_farmasi"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_farmasi" />
+        <item
+            android:id="@+id/nav_hbcr"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_hbcr_rsk_dharmasi" />
+        <item
+            android:id="@+id/nav_info_rksd"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_info_rksd" />
+        <item
+            android:id="@+id/nav_informasi_medis"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_informasi_medis" />
+        <item
+            android:id="@+id/nav_informasi_publik"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_informasi_publik" />
+        <item
+            android:id="@+id/nav_instalasi_layanan_eksekutif"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_instalasi_pelayanan_eksekutif" />
+        <item
+            android:id="@+id/nav_keperawatan"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_keperawatan" />
+        <item
+            android:id="@+id/nav_kinerja"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_kinerja" />
+        <item
+            android:id="@+id/nav_layanan_perawatan_unggulan"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_layanan_perawatan_unggulan" />
+        <item
+            android:id="@+id/nav_litbang"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_litbang" />
+        <item
+            android:id="@+id/nav_microsurgery"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_microsurgery" />
+        <item
+            android:id="@+id/nav_palliative"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_palliative" />
+        <item
+            android:id="@+id/nav_pbcr_dki_jakarta"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_pbcr_dki_jakarta" />
+        <item
+            android:id="@+id/nav_pbcr_jakarta_barat"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_pbcr_jakarta_barat" />
+        <item
+            android:id="@+id/nav_pbcr_nasional"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_pbcr_nasional" />
+        <item
+            android:id="@+id/nav_pelayanan"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_pelayanan" />
+        <item
+            android:id="@+id/nav_pelayanan_unggulan"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_pelayanan_unggulan" />
+        <item
+            android:id="@+id/nav_pendidikan"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_pendidikan" />
+        <item
+            android:id="@+id/nav_penelitian"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_penelitian" />
+        <item
+            android:id="@+id/nav_prinsip_dan_metode"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_prinsip_dan_metode" />
+        <item
+            android:id="@+id/nav_rawat_inap"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_rawat_inap" />
+        <item
+            android:id="@+id/nav_srikandi"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_srikandi" />
+        <item
+            android:id="@+id/nav_stem_cell_transplation"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_stem_cell_transplation" />
     </group>
 </menu>

@@ -13,25 +13,148 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.ascendant.dharmais.ui.gallery.GalleryFragment"
+        android:name="com.ascendant.dharmais.ui.pages.alur_pendaftaran.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.ascendant.dharmais.ui.slideshow.SlideshowFragment"
+        android:name="com.ascendant.dharmais.ui.pages.cancer_immunoteraphy.SlideshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_cancer_wound"
-        android:name="com.ascendant.dharmais.ui.slideshow.SlideshowFragment"
+        android:name="com.ascendant.dharmais.ui.pages.cancer_wound_care.cancer_wound_careFragment"
         android:label="@string/menu_cancer_wound_care"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_deteksi_dini"
-        android:name="com.ascendant.dharmais.ui.slideshow.SlideshowFragment"
+        android:name="com.ascendant.dharmais.ui.pages.deteksi_dini_kanker.deteksi_dini_kankerFragment"
         android:label="@string/menu_deteksi_dini_kanker"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_diklit"
+        android:name="com.ascendant.dharmais.ui.pages.diklit.diklitFragment"
+        android:label="@string/menu_diklit"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_farmasi"
+        android:name="com.ascendant.dharmais.ui.pages.farmasi.farmasiFragment"
+        android:label="@string/menu_farmasi"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_hbcr"
+        android:name="com.ascendant.dharmais.ui.pages.hbcr_rsk_dharmais.hbcr_rskFragment"
+        android:label="@string/menu_hbcr_rsk_dharmasi"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_info_rksd"
+        android:name="com.ascendant.dharmais.ui.pages.inforksd.inforksdFragment"
+        android:label="@string/menu_info_rksd"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_informasi_medis"
+        android:name="com.ascendant.dharmais.ui.pages.informasi_medis.informasimedisFragment"
+        android:label="@string/menu_informasi_medis"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_informasi_publik"
+        android:name="com.ascendant.dharmais.ui.pages.informasi_publik.informasipublikFragment"
+        android:label="@string/menu_informasi_publik"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_instalasi_layanan_eksekutif"
+        android:name="com.ascendant.dharmais.ui.pages.instalasi_pelayanan.instalasipelayananFragment"
+        android:label="@string/menu_instalasi_pelayanan_eksekutif"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_keperawatan"
+        android:name="com.ascendant.dharmais.ui.pages.keperawatan.keperawatanFragment"
+        android:label="@string/menu_keperawatan"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_kinerja"
+        android:name="com.ascendant.dharmais.ui.pages.cancer_immunoteraphy.SlideshowFragment"
+        android:label="@string/menu_kinerja"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_layanan_perawatan_unggulan"
+        android:name="com.ascendant.dharmais.ui.pages.cancer_immunoteraphy.SlideshowFragment"
+        android:label="@string/menu_layanan_perawatan_unggulan"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_litbang"
+        android:name="com.ascendant.dharmais.ui.pages.litbang.litbangFragment"
+        android:label="@string/menu_litbang"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_microsurgery"
+        android:name="com.ascendant.dharmais.ui.pages.microsurgery.microsurgeryFragment"
+        android:label="@string/menu_microsurgery"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_palliative"
+        android:name="com.ascendant.dharmais.ui.pages.palliative.palliativeFragment"
+        android:label="@string/menu_palliative"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_pbcr_dki_jakarta"
+        android:name="com.ascendant.dharmais.ui.pages.pbcr_dki_jakarta.pbcr_rki_jakartaFragment"
+        android:label="@string/menu_pbcr_dki_jakarta"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_pbcr_jakarta_barat"
+        android:name="com.ascendant.dharmais.ui.pages.pbcr_jakarta_barat.pbcr_jakarta_baratFragment"
+        android:label="@string/menu_pbcr_jakarta_barat"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_pbcr_nasional"
+        android:name="com.ascendant.dharmais.ui.pages.pbcr_nasional.pbcr_nasionalFragment"
+        android:label="@string/menu_pbcr_nasional"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_pelayanan"
+        android:name="com.ascendant.dharmais.ui.pages.pelayanan.pelayananFragment"
+        android:label="@string/menu_pelayanan"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_pelayanan_unggulan"
+        android:name="com.ascendant.dharmais.ui.pages.pelayanan_unggulan.pelayanan_unggulanFragment"
+        android:label="@string/menu_pelayanan_unggulan"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_pendidikan"
+        android:name="com.ascendant.dharmais.ui.pages.pendidikan.pendidikanFragment"
+        android:label="@string/menu_pendidikan"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_penelitian"
+        android:name="com.ascendant.dharmais.ui.pages.penelitian.penelitianFragment"
+        android:label="@string/menu_penelitian"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_prinsip_dan_metode"
+        android:name="com.ascendant.dharmais.ui.pages.prinsipdanmetode.prinsipdanmetodeFragment"
+        android:label="@string/menu_prinsip_dan_metode"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_rawat_inap"
+        android:name="com.ascendant.dharmais.ui.pages.rawatinap.rawatinapFragment"
+        android:label="@string/menu_rawat_inap"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_srikandi"
+        android:name="com.ascendant.dharmais.ui.pages.srikandi.srikandiFragment"
+        android:label="@string/menu_srikandi"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_stem_cell_transplation"
+        android:name="com.ascendant.dharmais.ui.pages.stemcell.stemcellFragment"
+        android:label="@string/menu_stem_cell_transplation"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
